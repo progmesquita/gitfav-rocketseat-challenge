@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-color: #000;
+    --bg-table-color: #030B0D;
+    --bg-search-button: #065E7C;
+
+    --tt-color: #E1E1E6;
+    --tt-remove-button: #F75A68;
+    --tt-placeholder: #7C7C8A;
+}
+
+.flex {
+    display: flex;
+}
+
+body, button {
+    font-size: 2rem;
+    line-height: 160%;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--tt-color);
+}
+
+body, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+#app {
+    max-width: 112rem;
+    margin: auto;
+
+    padding-inline: 5rem;
+}
+
+nav {
+    justify-content: space-between;
+    align-items: end;
+
+    margin-block: 11.5rem 8.7rem;
+}
+
+table, nav {
+    width: 100%;
+}
+
+.search {
+    display: flex;
+}
+
+.search > input {
+    width: 46.2rem;
+
+    padding: 1.6rem;
+    margin-right: .8rem;
+
+    font-size: 1.6rem;
+    
+    color: var(--tt-color);
+    background-color: #06181C;
+
+    border-radius: .5rem;
+    border: 0;
+}
+
+.search > input::placeholder {
+    color: var(--tt-placeholder);
+}
+
+.search > button {
+    align-items: center;
+    padding: 1.2rem 3.2rem;
+
+    border-radius: .5rem;
+    border: 0;
+
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    color: #FFF;
+    background-color: var(--bg-search-button);
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.search > button:hover {
+    background-color: #FFF;
+    color: #065E7C;
+}
+
+.search > button > i {
+    font-size: 2.4rem;
+    margin-right: .8rem;
+}
+
+/* Table */
+table {
+    background-color: var(--bg-table-color);
+    border-collapse: collapse;
+}
+
+tr {
+    display: flex;
+    align-items: center;
+}
+
+tbody td, thead th {
+    width: 100%;
+}
+
+thead, tbody {
+    display: block;
+}
+
+thead th:nth-child(1), tbody td:nth-child(1) {
+    min-width: 40rem;
+}
+
+thead th:last-child, tbody td:last-child {
+    min-width: 17.8rem;
+}
+
+thead {
+    text-align: left;
+    background-color: #092D38;
+
+    border: 1px solid #4A808C;
+    border-bottom: 0;
+    border-radius: 1.2rem 1.2rem 0 0;
+}
+
+thead th {
+    padding-block: 1.6rem;
+}
+
+thead th {
+    padding-left: 4rem;
+}
+
+tbody {
+    max-height: 55rem;
+    overflow-y: scroll;
+
+    border: 1px solid #4A808C;
+    border-top: 0;
+    border-radius: 0 0 1.2rem 1.2rem;
+}
+
+tbody tr {
+    border-bottom: 1px solid #4A808C;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #06161B;
+}
+
+tbody tr:last-child {
+    border: 0;
+}
+
+tbody td {
+    padding: 2.4rem 0 2.4rem 4rem;
+}
+
+.user {
+    align-items: center;
+}
+
+tbody .user img {
+    width: 5.6rem;
+    height: 5.6rem;
+
+    margin-right: 1.6rem;
+
+    border-radius: 50%;
+}
+
+tbody .user a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+tbody .user span {
+    font-weight: normal;
+}
+
+tbody button {
+    margin-right: 5.3rem;
+    background: transparent;
+
+    border: 0;
+    color: var(--tt-remove-button);
+
+    cursor: pointer;
+}
+
+section:not(.table-empty) > .empty {
+    display: none;
+}
+
+.table-empty  {
+    border-radius: 1.2rem;
+}
+
+.table-empty table {
+    border: 0;
+}
+
+.table-empty > div {
+    height: 55rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 4rem;
+    line-height: 2.5rem;
+
+    color: #4E5455;
+    background-color: #030B0D;
+}
+
+.table-empty > div > img {
+    width: 13.2rem;
+    margin-right: 6rem;
+}
+
+.empty {
+    border: 1px solid #4A808C;
+    border-top: 0;
+    border-radius: 0 0 1.2rem 1.2rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: .6rem;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4A808C;
+    border-radius: 1rem;
+}
